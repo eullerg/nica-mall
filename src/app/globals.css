@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─────────────────────────────────────────────
+   PALETAS via CSS custom properties
+   ───────────────────────────────────────────── */
+
+/* LIGHT – mantém seu “white-metal” */
+:root {
+  --font-raleway: var(--font-raleway);
+  --bg:          #f8f9fb;
+  --surface:     #ffffff;           /* cartões / inputs */
+  --surface-2:   #f1f3f7;
+  --fg:          #1e293b;           /* slate-800 */
+  --fg-muted:    #475569;           /* slate-600 */
+
+  --brand:       #19caff;           /* turquesa */
+  --brand-dark:  #00b0e5;
+}
+
+/* DARK – inspirado no Perplexity */
+:root.dark {
+  --bg:          #0f1116;
+  --surface:     #191c22;
+  --surface-2:   #1f222a;
+  --fg:          #f8fafc;           /* slate-50 */
+  --fg-muted:    #94a3b8;           /* slate-400 */
+
+  --brand:       #30d1ff;
+  --brand-dark:  #00a9e0;
+}
+
+/* ─────────────────────────────────────────────
+   BASE STYLES
+   ───────────────────────────────────────────── */
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    font-family: var(--font-raleway), system-ui, sans-serif;
+    font-feature-settings: "rlig" 1, "calt" 1; 
+    @apply antialiased bg-[color:var(--bg)] text-[color:var(--fg)] text-slate-900;
+    /* white-metal radial apenas no modo claro */
+    background:
+      radial-gradient(ellipse at center,
+        #ffffff 0%,
+        #f7f7f9 40%,
+        #ececf1 70%,
+        #d8d8de 100%);
+  }
+
+  :root.dark body {
+    /* dark: remove o metal – fundo sólido */
+    background: var(--bg);
+  }
+
+  * {
+    @apply border-[color:var(--surface-2)];
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-semibold;
+  }
+}
+
+/* ─────────────────────────────────────────────
+   HELPERS
+   ───────────────────────────────────────────── */
+
+/* hero-grad: turquesa → transparente */
+.hero-grad {
+  background: radial-gradient(
+    ellipse at top,
+    rgba(26, 202, 255, 0.15) 0%,
+    rgba(26, 202, 255, 0.10) 25%,
+    rgba(255, 255, 255, 0) 65%
+  );
+}
+
+/* cores utilitárias que o tailwind.config mapeia */
+.bg-surface      { background-color: var(--surface);     }
+.bg-surface-2    { background-color: var(--surface-2);   }
+.text-muted      { color:            var(--fg-muted);    }
+.bg-brand        { background-color: var(--brand);       }
+.bg-brand-700    { background-color: var(--brand-dark);  }
+.text-brand      { color:            var(--brand);       }
