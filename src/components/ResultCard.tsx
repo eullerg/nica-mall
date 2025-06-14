@@ -7,6 +7,7 @@ export interface Item {
   store: string;
   price: string;
   image: string;
+  brand: string;
 }
 
 interface ResultCardProps {
@@ -35,5 +36,4 @@ export default function ResultCard({ item }: ResultCardProps) {
   );
 }
 
-/* ---------- exporta só o tipo, modo isolatedModules ---------- */
-export type { Item };
+

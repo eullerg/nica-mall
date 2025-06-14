@@ -8,6 +8,7 @@ const mockProducts: Item[] = [
     store: 'iPlace',
     price: 'R$ 7.999,00',
     image: 'https://picsum.photos/seed/iphone15/400/300',
+    brand: 'Apple',
   },
   {
     id: 'iphone-15',
@@ -15,6 +16,7 @@ const mockProducts: Item[] = [
     store: 'Magazine Luiza',
     price: 'R$ 7.699,00',
     image: 'https://picsum.photos/seed/iphone15b/400/300',
+    brand: 'Apple',
   },
   {
     id: 'air-jordan',
@@ -22,13 +24,15 @@ const mockProducts: Item[] = [
     store: 'Nike Store',
     price: 'R$ 1.299,00',
     image: 'https://picsum.photos/seed/jordan/400/300',
+    brand: 'Nike',
   },
   {
     id: 'air-jordan',
-    name: 'Tênis Air Jordan 1',
+    name: 'Tenis Air Jordan 1',
     store: 'Artwalk',
     price: 'R$ 1.199,00',
     image: 'https://picsum.photos/seed/jordan2/400/300',
+    brand: 'Nike',
   },
 ];
 

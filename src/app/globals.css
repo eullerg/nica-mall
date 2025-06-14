@@ -5,6 +5,24 @@
 /* ─────────────────────────────────────────────
    PALETAS via CSS custom properties
    ───────────────────────────────────────────── */
+   .hero-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('/imagem-shopping.jpg'); /* desktop */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.20;                  /* light */
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  @media (max-width: 767px) {
+    .hero-bg::after {
+      background-image: url('/imagem-shopping-2.png'); /* mobile */
+      background-position: top;
+    }
+  }
 
 /* LIGHT – mantém seu “white-metal” */
 :root {
@@ -88,3 +106,15 @@
 .bg-brand        { background-color: var(--brand);       }
 .bg-brand-700    { background-color: var(--brand-dark);  }
 .text-brand      { color:            var(--brand);       }
+
+/* hero responsivo */
+@layer utilities {
+  /* estilo default (desktop) já é cover/center – nada a mudar */
+
+  @media (max-width: 767px) {
+    .hero-mobile\:\!bg-zoom-top {
+      background-size: 120% !important;   /* "zoom" */
+      background-position: top !important;
+    }
+  }
+}

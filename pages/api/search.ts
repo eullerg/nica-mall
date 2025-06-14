@@ -10,6 +10,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       store: 'Nike Store',
       price: 'R$ 799,90',
       image: 'https://picsum.photos/seed/nike/400/300',
+      brand: 'Nike',
     },
     {
       id: '2',
@@ -17,6 +18,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       store: 'Samsung',
       price: 'R$ 5.499,00',
       image: 'https://picsum.photos/seed/galaxy/400/300',
+      brand: 'Samsung',
     },
     {
       id: '3',
@@ -24,6 +26,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       store: 'Zara',
       price: 'R$ 299,90',
       image: 'https://picsum.photos/seed/dress/400/300',
+      brand: 'Zara',
     },
     {
       id: '4',
@@ -31,6 +34,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       store: 'JBL Store',
       price: 'R$ 449,90',
       image: 'https://picsum.photos/seed/headphone/400/300',
+      brand: 'JBL',
     },
   ];
   res.status(200).json({ items: mock });

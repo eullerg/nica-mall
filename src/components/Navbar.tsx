@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Menu, X, Mail, Sun, Moon } from 'lucide-react';
 
 interface NavbarProps {

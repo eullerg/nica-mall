@@ -2,8 +2,9 @@ import { useEffect, useState } from 'react';
 
 export default function useTheme() {
   const [dark, setDark] = useState<boolean>(() => {
-    if (typeof window === 'undefined') return false;
-    return localStorage.getItem('theme') === 'dark';
+    if (typeof window === 'undefined') return true;
+    const saved = localStorage.getItem('theme');
+    return saved ? saved === 'dark' : true;
   });
 
   useEffect(() => {

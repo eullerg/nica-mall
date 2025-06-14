@@ -10,12 +10,9 @@ export default function Hero({ onSearch }: HeroProps) {
   return (
     <section
       className="
-        relative hero-grad
+        relative hero-bg hero-grad
         flex min-h-screen flex-col items-center justify-center
         px-4 text-center
-        after:absolute after:inset-0
-        after:bg-[url('/imagem-shopping.jpg')] after:bg-cover after:bg-center
-        after:opacity-20 dark:after:opacity-10
       "
     >
       {/* card ---------------------------------------------------- */}
@@ -23,7 +20,7 @@ export default function Hero({ onSearch }: HeroProps) {
         className="
           relative z-10 w-full max-w-[840px] rounded-[28px]
           bg-white/70 dark:bg-surface/80 backdrop-blur-xl shadow-xl p-12
-          -mt-16 md:-mt-24              /* ← levanta o bloco */
+          -mt-16 md:-mt-24
         "
       >
         <h1
