@@ -10,9 +10,16 @@ export default function Hero({ onSearch }: HeroProps) {
   return (
     <section
       className="
-        relative hero-bg hero-grad
+        relative hero-grad
         flex min-h-screen flex-col items-center justify-center
         px-4 text-center
+
+        /* ─── foto de fundo ─── */
+        after:absolute after:inset-0
+        after:bg-[url('/imagem-shopping-2.png')]      /* mobile */
+        md:after:bg-[url('/imagem-shopping.jpg')]     /* desktop */
+        after:bg-cover after:bg-top md:after:bg-center
+        after:opacity-20 dark:after:opacity-10
       "
     >
       {/* card ---------------------------------------------------- */}
