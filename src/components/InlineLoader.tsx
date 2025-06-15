@@ -4,11 +4,8 @@
 import dynamic from 'next/dynamic';
 import loadingJson from '@/../public/lottie-loading-screen.json';
 
-// o pacote exporta um componente default.
-// basta capturar esse default no dynamic:
 const LottiePlayer = dynamic(() => import('react-lottie-player'), {
-  ssr: false,          // só no client
-  // opcional: podemos exibir um fallback leve enquanto o player carrega
+  ssr: false,
   loading: () => <div className="h-32" />,
 });
 

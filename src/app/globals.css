@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 /* ─────────────────────────────────────────────
-   PALETAS via CSS custom properties
+   PALETAS 
    ───────────────────────────────────────────── */
    .hero-bg::after {
     content: '';
     position: absolute;
     inset: 0;
-    background-image: url('/imagem-shopping.jpg'); /* desktop */
+    background-image: url('/imagem-shopping.jpg'); /* bg-desktop */
     background-size: cover;
     background-position: center;
     opacity: 0.20;                  /* light */
@@ -19,12 +19,12 @@
   
   @media (max-width: 767px) {
     .hero-bg::after {
-      background-image: url('/imagem-shopping-2.png'); /* mobile */
+      background-image: url('/imagem-shopping-2.png'); /* bg-mobile */
       background-position: top;
     }
   }
 
-/* LIGHT – mantém seu “white-metal” */
+/* LIGHT – mantém “white-metal” */
 :root {
   --font-raleway: var(--font-raleway);
   --bg:          #f8f9fb;
@@ -37,7 +37,7 @@
   --brand-dark:  #00b0e5;
 }
 
-/* DARK – inspirado no Perplexity */
+/* DARK –  */
 :root.dark {
   --bg:          #0f1116;
   --surface:     #191c22;
@@ -109,7 +109,6 @@
 
 /* hero responsivo */
 @layer utilities {
-  /* estilo default (desktop) já é cover/center – nada a mudar */
 
   @media (max-width: 767px) {
     .hero-mobile\:\!bg-zoom-top {

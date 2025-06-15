@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-	/* 1 ─ enable darkMode by class */
+	/* 1 ─  darkMode por classe */
 	darkMode: 'class',
   
 	content: [
@@ -36,7 +36,7 @@ module.exports = {
 		  fg:         'var(--fg)',
 		  muted:      'var(--fg-muted)',
   
-		  /* já existiam via shadcn; mantidos */
+		  /* shadcn */
 		  background: 'hsl(var(--background))',
 		  foreground: 'hsl(var(--foreground))',
 		  card: {

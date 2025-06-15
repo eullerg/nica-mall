@@ -34,7 +34,7 @@ export default function SearchBar({ onSearch }: Props) {
                    focus:ring-brand-400"
       />
 
-      {/* botão à direita, também envia */}
+      {/* botão à direita */}
       <button
         type="submit"
         aria-label="Buscar"

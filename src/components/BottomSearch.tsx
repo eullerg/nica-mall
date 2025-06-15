@@ -27,7 +27,7 @@ export default function BottomSearch({ onSearch }: { onSearch: (q: string) => vo
             className="h-full w-full bg-transparent pr-[68px] text-base
                        text-slate-200 placeholder:text-slate-500 outline-none"
           />
-          {/* botão encaixado à direita */}
+          {/* botão à direita */}
           <button
             aria-label="Buscar"
             type="submit"

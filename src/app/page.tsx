@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import LoadingScreen from '@/components/LoadingScreen';   // já existe
+import LoadingScreen from '@/components/LoadingScreen';  
 import ResultView from '@/components/ResultView';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
@@ -26,7 +26,7 @@ export default function Home() {
       setLoadingInline(true);
     }
 
-    // “delay” de 2 s simulando API -----------------
+    // “delay” de 2s, simulando API -----------------
     await new Promise(r => setTimeout(r, 2000));
 
     const res = mockProducts.filter(
@@ -35,7 +35,7 @@ export default function Home() {
         p.store.toLowerCase().includes(norm)
     );
 
-    // atualizar estados ----------------------------
+    // atualiza estados ----------------------------
     setQuery(q);
     setItems(res);
     setSearchedOnce(true);
@@ -56,7 +56,7 @@ export default function Home() {
     <>
       <Navbar onHome={goHome} />
 
-      {/* Loading em tela cheia (apenas na primeira busca) */}
+      {/* Loading em tela cheia */}
       {loadingFull && <LoadingScreen />}
 
       {!showingResults && !loadingFull && <Hero onSearch={search} />}

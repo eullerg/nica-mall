@@ -11,7 +11,7 @@ export default function AIResponse({ query, loading }: Props) {
 
   useEffect(() => {
     if (!query) return;
-    // simula delay da IA
+    // delay forçado para testar o loading
     setText(null);
     const t = setTimeout(() => {
       setText(`O produto “${query}” está disponível em várias lojas do Manaíra Shopping.

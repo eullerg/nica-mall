@@ -6,7 +6,7 @@ export async function GET(req: Request) {
   const { searchParams } = new URL(req.url);
   const q = (searchParams.get('q') ?? '').toLowerCase();
 
-  // 👉 substitua pelo fetch real quando a API do shopping estiver pronta
+  // 👉 substituir pelo fetch real quando a API do shopping estiver pronta
   const items = mockProducts.filter(
     p =>
       p.name.toLowerCase().includes(q) ||

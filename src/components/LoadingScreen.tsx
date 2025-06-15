@@ -11,7 +11,7 @@ export default function LoadingScreen() {
       <Lottie
         animationData={loadingJson}
         loop
-        autoplay    /* <- mesmo efeito do Player */
+        autoplay    
         className="w-40 md:w-56"
       />
     </div>
